@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=380" />
+  <title>WeHaveIt</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="top">
+    <div>
+      <p class="brand">WeHaveIt</p>
+      <p class="count" id="count">0 / 50 saved</p>
+    </div>
+    <button id="saveCurrent" type="button">Save this page</button>
+  </header>
+  <p class="flash" id="flash" hidden></p>
+  <label class="search">
+    <span class="sr">Search</span>
+    <input id="query" type="search" placeholder="Search what you already own" />
+  </label>
+  <ul id="list" class="list"></ul>
+  <footer>
+    <label class="name">
+      Label
+      <input id="personName" type="text" maxlength="24" />
+    </label>
+    <a href="https://thensanity.github.io/wehaveit/#pricing" id="siteLink" target="_blank" rel="noreferrer">Pro · SGD 15/mo</a>
+  </footer>
+  <script src="lib/match.js"></script>
+  <script src="lib/storage.js"></script>
+  <script src="lib/platforms.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

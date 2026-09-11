@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WeHaveIt — Stop buying what you already own</title>
+  <meta name="description" content="A Chrome extension that warns you if your household already bought this, on Shopee, Amazon, FairPrice, Shopify stores, and most product pages." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="nav">
+      <div class="logo">WeHaveIt</div>
+      <div>
+        <a href="#how">How it works</a>
+        <a href="#shops">Shops</a>
+        <a href="#pricing">Pricing</a>
+        <a href="demo.html">Live demo</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div>
+        <h1>Stop buying what you already own.</h1>
+        <p class="lede">
+          WeHaveIt sits on the shops you already use — Shopee, Lazada, Amazon, FairPrice, Carousell, Shopify stores, and most other product pages — and tells you if this item is already in your home.
+          No coupon toolbar. No AI bill. Just your household’s memory.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="#install">Install the free extension</a>
+          <a class="btn ghost" href="demo.html">Try the demo shop</a>
+        </div>
+      </div>
+      <aside class="stamp-card" aria-label="Product preview">
+        <div class="fake-shop">
+          <div class="photo"></div>
+          <div class="pad">
+            <h2>Anker USB-C Cable 2m</h2>
+            <p class="price">SGD 12.90</p>
+            <div class="bar">
+              <div>
+                <b>Already in your home</b>
+                <span>Shopee · 3 Mar 2026 · SGD 12.90</span>
+              </div>
+              <div class="pill">Have it</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </header>
+
+    <section class="section" id="how">
+      <h3>How it works</h3>
+      <div class="steps">
+        <article class="card">
+          <strong>1. Buy something once</strong>
+          Click <b>We have this</b> on the product page, or right-click any shop page and save it.
+        </article>
+        <article class="card">
+          <strong>2. See it again later</strong>
+          If you or someone in your home opens the same item, a bar appears: already bought.
+        </article>
+        <article class="card">
+          <strong>3. Don’t pay twice</strong>
+          Cables, vitamins, pans, printer ink. The boring stuff you forget you already have.
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="shops">
+      <h3>Works on most shops</h3>
+      <p class="lede">Named support for the stores people actually open, plus a generic reader for Shopify, WooCommerce, and any page that looks like a product.</p>
+      <div class="shops">
+        <span>Shopee</span><span>Lazada</span><span>Amazon</span><span>eBay</span><span>Etsy</span>
+        <span>AliExpress</span><span>SHEIN</span><span>Temu</span><span>Qoo10</span><span>Carousell</span>
+        <span>FairPrice</span><span>Watsons</span><span>Guardian</span><span>Cold Storage</span><span>Giant</span>
+        <span>Zalora</span><span>ASOS</span><span>Uniqlo</span><span>Zara</span><span>H&amp;M</span>
+        <span>Nike</span><span>Adidas</span><span>IKEA</span><span>Decathlon</span><span>Sephora</span>
+        <span>iHerb</span><span>YesStyle</span><span>Walmart</span><span>Target</span><span>Best Buy</span>
+        <span>Costco</span><span>Home Depot</span><span>Newegg</span><span>Flipkart</span><span>Myntra</span>
+        <span>Tokopedia</span><span>Bukalapak</span><span>Blibli</span><span>Taobao</span><span>Tmall</span>
+        <span>JD</span><span>Pinduoduo</span><span>Rakuten</span><span>Mercari</span>
+        <span>Shopify stores</span><span>WooCommerce</span><span>Any product page</span>
+      </div>
+      <p class="note">If a shop is missing, right-click the page and choose <b>WeHaveIt: I already bought this</b>.</p>
+    </section>
+
+    <section class="section" id="install">
+      <h3>Install on Chrome (2 minutes)</h3>
+      <div class="card">
+        <ol>
+          <li>Open Chrome and go to <code>chrome://extensions</code></li>
+          <li>Turn on <b>Developer mode</b></li>
+          <li>Click <b>Load unpacked</b> and choose the <code>extension</code> folder in this project</li>
+          <li>Open a product page on Shopee, Amazon, FairPrice, or any shop, or use the <a href="demo.html">demo shop</a> first</li>
+        </ol>
+        <p class="note">Chrome Web Store listing comes after this local version works on real shops.</p>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <h3>Pricing</h3>
+      <div class="plans">
+        <article class="card">
+          <strong>Free</strong>
+          <div class="price-tag">SGD 0</div>
+          <p>50 items, one person, saved on this computer. Enough to prove it.</p>
+        </article>
+        <article class="card featured">
+          <strong>Pro</strong>
+          <div class="price-tag">SGD 15<span style="font-size:1rem">/mo</span></div>
+          <p>Unlimited items and a shared household list. This is the Paddle product.</p>
+          <p class="note">Paddle checkout is next. The extension already enforces the free 50-item cap.</p>
+        </article>
+        <article class="card">
+          <strong>Not included yet</strong>
+          <p>No email scraping, no bank login, no coupon injection. Pro is household sync, not a shopping spyware toolbar.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      WeHaveIt stores your list locally in Chrome until Pro sync ships.
+      · <a href="privacy.html">Privacy</a>
+      · <a href="support.html">Support</a>
+    </footer>
+  </div>
+</body>
+</html>

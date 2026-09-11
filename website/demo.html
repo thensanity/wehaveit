@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Demo shop · WeHaveIt</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .shop { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 24px 0 80px; }
+    .nav { padding-top: 58px; }
+    .product-photo { height: 280px; border-radius: 24px; border: 1px solid var(--line); }
+    .usb { background: linear-gradient(145deg, #204c3c, #c5d9a6); }
+    .fryer { background: linear-gradient(145deg, #5b3a1d, #e8c27a); }
+    .buy { margin-top: 18px; }
+    .switch { margin: 12px 0 0; }
+    @media (max-width: 800px) { .shop { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body data-whi-demo="1">
+  <div class="wrap">
+    <nav class="nav">
+      <a class="logo" href="index.html">WeHaveIt</a>
+      <a href="index.html">Back to site</a>
+    </nav>
+    <p class="note" id="hint">This demo shop runs the same overlay as the extension, in your browser, with no Chrome install required.</p>
+    <div class="shop">
+      <div id="photo" class="product-photo usb"></div>
+      <div>
+        <p class="note" id="shopName">Demo shop</p>
+        <h1 id="title">Anker USB-C Cable 2m</h1>
+        <p class="price" id="price">SGD 12.90</p>
+        <p class="lede" id="blurb">A boring cable you will buy twice unless something stops you.</p>
+        <a class="btn primary buy" href="#">Buy now (fake)</a>
+        <p class="switch">
+          <a href="demo.html?id=anker-usbc-2m">USB cable</a>
+          ·
+          <a href="demo.html?id=air-fryer-5l">Air fryer</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <script src="../extension/lib/match.js"></script>
+  <script src="../extension/lib/storage.js"></script>
+  <script src="../extension/lib/platforms.js"></script>
+  <script src="../extension/lib/overlay-ui.js"></script>
+  <script src="demo.js"></script>
+</body>
+</html>

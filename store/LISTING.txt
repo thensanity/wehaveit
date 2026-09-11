@@ -1,0 +1,142 @@
+WeHaveIt — Chrome Web Store listing copy
+Paste these fields into https://chrome.google.com/webstore/devconsole
+
+==================================================
+STORE LISTING
+==================================================
+
+Name
+WeHaveIt
+
+Short description (132 characters max)
+Stop buying what you already own. WeHaveIt reminds you on shopping sites if this product is already on your list.
+
+Detailed description
+WeHaveIt is a simple reminder for online shopping.
+
+When you buy a cable, a pan, vitamins, or printer ink, mark it once. The next time you open that product — on Shopee, Amazon, FairPrice, Lazada, or another supported shop — a bar appears: already in your home.
+
+How to use it
+1. Open a product page.
+2. Click “We have this”, or right-click the page and choose “WeHaveIt: I already bought this”.
+3. Come back later. If it is the same item, WeHaveIt warns you before you pay again.
+
+What it does
+• Saves items you mark as already owned
+• Shows a reminder on supported shopping product pages
+• Matches the same item across shops when the titles are clearly the same
+• Stores your list on this computer only
+
+What it does not do
+• It does not inject coupons or cashback
+• It does not read your email or bank
+• It does not upload your list to our servers in this version
+
+Free: up to 50 saved items on this browser.
+
+Category
+Shopping
+
+Language
+English
+
+==================================================
+PRIVACY TAB
+==================================================
+
+Single purpose
+Help people avoid buying a product they already own by saving items they mark and showing a reminder on shopping product pages.
+
+Privacy policy URL
+https://thensanity.github.io/wehaveit/privacy.html
+
+Does this extension collect user data?
+Yes — only product details from pages the user opens or saves (title, price, image URL, page URL), stored locally in Chrome. No account, no server upload, no ads.
+
+Check these data types:
+[ ] Personally identifiable information
+[ ] Health
+[ ] Financial and payment information
+[ ] Authentication information
+[ ] Personal communications
+[ ] Location
+[x] Web history  — NO, uncheck if the form splits "Website content"
+[x] User activity / website content: product title, price, image, and URL from shopping product pages the user visits or explicitly saves
+
+If the dashboard has "Website content" and "User activity", tick those. Do not tick web history if that means a log of every site they visit. WeHaveIt does not keep a full browsing history; it only reads the current product page to show the reminder and only keeps items the user saves.
+
+Certify:
+[x] Not sold to third parties
+[x] Not used for unrelated purposes
+[x] Limited use: only for the single purpose above
+[x] Users can delete data by removing items or uninstalling
+
+Permission justifications
+
+storage
+Save the user’s owned-item list on this device.
+
+contextMenus
+Let the user save the current product with a right-click.
+
+scripting
+Read the product title, price, image, and URL when the user saves a page or when the reminder bar runs on a shopping product page.
+
+activeTab
+Access the page the user is looking at when they click the extension icon.
+
+Host permissions (shopping sites)
+Show the reminder bar on known shopping product pages such as Shopee, Amazon, Lazada, and FairPrice.
+
+Optional host permissions
+Used only if the user saves a product on a shop that is not in the default list. Chrome will ask first.
+
+==================================================
+DISTRIBUTION
+==================================================
+
+Visibility
+Public
+(You can choose Trusted testers first if you want a quieter launch.)
+
+Countries
+All regions
+or at least Singapore + countries you shop from
+
+Pricing
+Free
+
+==================================================
+TEST INSTRUCTIONS
+==================================================
+
+No login is required.
+
+1. Install the extension.
+2. Open any Amazon or Shopee product page (a product detail page, not search).
+3. Click “We have this” on the green bar, or use the popup “Save this page”.
+4. Reload the same product page. The bar should say the item is already in your home.
+5. Open a clearly different product. The bar should not claim it is the same item.
+
+Demo (does not require the extension overlay):
+https://thensanity.github.io/wehaveit/demo.html
+
+Privacy policy:
+https://thensanity.github.io/wehaveit/privacy.html
+
+==================================================
+UPLOAD
+==================================================
+
+ZIP file (manifest must be at the zip root):
+store/wehaveit.zip
+
+Screenshots (1280x800):
+store/screenshot-1.png
+store/screenshot-2.png
+store/screenshot-3.png
+
+Small promo tile (440x280):
+store/promo-small.png
+
+Icon is inside the zip (extension/icons/icon128.png).
