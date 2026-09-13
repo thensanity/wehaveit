@@ -67,7 +67,14 @@ h1 {
   padding: 12px 18px;
   font-weight: 750;
   border: 1px solid var(--green);
+  font: inherit;
+  cursor: pointer;
 }
+
+button.btn { font-weight: 750; }
+
+.note { color: var(--muted); font-size: 0.95rem; }
+.note.error { color: #8a3b16; }
 
 .btn.primary { background: var(--green); color: var(--paper); }
 .btn.ghost { color: var(--green); background: transparent; }
@@ -128,6 +135,17 @@ h3 { font-size: 1.8rem; letter-spacing: -0.04em; margin: 0 0 18px; }
 
 .price-tag { font-size: 2rem; font-weight: 800; letter-spacing: -0.04em; }
 .plans .card.featured { border-color: var(--green); box-shadow: 8px 10px 0 var(--green); }
+.plans .card .btn { margin-top: 14px; }
+
+.license-card code {
+  display: block;
+  margin: 12px 0;
+  padding: 12px;
+  background: #fff;
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  word-break: break-all;
+}
 
 .shops {
   display: flex;

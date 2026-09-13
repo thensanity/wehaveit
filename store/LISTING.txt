@@ -32,7 +32,7 @@ What it does not do
 • It does not read your email or bank
 • It does not upload your list to our servers in this version
 
-Free: up to 50 saved items on this browser.
+Free: up to 50 saved items on this browser. Pro (sold on our website with Paddle, not in this store) removes that cap.
 
 Category
 Shopping
@@ -90,6 +90,9 @@ Show the reminder bar on known shopping product pages such as Shopee, Amazon, La
 
 Optional host permissions
 Used only if the user saves a product on a shop that is not in the default list. Chrome will ask first.
+
+https://thensanity.github.io/wehaveit/*
+Our website. After a Paddle checkout the success page includes a transaction id. The extension reads that id so Pro can unlock on this computer. It does not read other GitHub Pages sites.
 
 ==================================================
 DISTRIBUTION

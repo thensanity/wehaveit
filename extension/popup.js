@@ -79,7 +79,7 @@ async function saveCurrentPage() {
     await render();
   } catch (err) {
     if (err.code === "FREE_LIMIT") {
-      showFlash("Free list is full (50).");
+      showFlash("Free list is full (50). Buy Pro on the website.");
       return;
     }
     showFlash(err.message || "Could not save this page.");
@@ -123,6 +123,8 @@ async function render() {
     ? `${items.length} saved · Pro`
     : `${items.length} / ${limit} saved`;
   nameEl.value = settings.personName || "Me";
+  siteLink.textContent = settings.pro ? "Manage · website" : "Buy Pro · SGD 15/mo";
+  document.getElementById("unlockBox").hidden = Boolean(settings.pro);
   listEl.innerHTML = "";
   if (!shown.length) {
     const empty = document.createElement("li");
@@ -143,6 +145,17 @@ nameEl.addEventListener("change", async () => {
   await WHI.storage.setSettings({ personName: nameEl.value.trim() || "Me" });
 });
 
-siteLink.href = "https://thensanity.github.io/wehaveit/#pricing";
+siteLink.href = "https://thensanity.github.io/wehaveit/website/index.html#pricing";
+
+document.getElementById("activate").addEventListener("click", async () => {
+  showFlash("");
+  try {
+    await WHI.license.activate(document.getElementById("license").value);
+    showFlash("Pro unlocked on this computer.");
+    await render();
+  } catch {
+    showFlash("That does not look like a Paddle transaction id.");
+  }
+});
 
 render();

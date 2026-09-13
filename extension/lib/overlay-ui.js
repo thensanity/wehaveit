@@ -153,20 +153,25 @@
       detail = hit.title;
     }
 
+    const showPro = atLimit && match.level === "none";
     wrap.innerHTML = `
       <div class="${klass}">
         <div class="stamp">${match.level === "none" ? "New" : "Have it"}</div>
         <div class="body">
           <div class="status">${status}</div>
           <div class="detail">${detail}</div>
-          ${atLimit && match.level === "none" ? '<div class="msg">Free list is full (50). Pro unlocks unlimited.</div>' : ""}
+          ${showPro ? '<div class="msg">Free list is full (50). Pro unlocks unlimited.</div>' : ""}
           ${view.error ? `<div class="msg">${view.error}</div>` : ""}
         </div>
         <div class="actions">
           <button class="ghost" type="button" data-whi="hide">Hide</button>
-          <button class="primary" type="button" data-whi="save" ${atLimit ? "disabled" : ""}>
-            ${match.level === "none" ? "We have this" : "Bought another"}
-          </button>
+          ${
+            showPro
+              ? '<button class="primary" type="button" data-whi="pro">Get Pro</button>'
+              : `<button class="primary" type="button" data-whi="save">${
+                  match.level === "none" ? "We have this" : "Bought another"
+                }</button>`
+          }
         </div>
       </div>
     `;
@@ -177,6 +182,9 @@
     });
     wrap.querySelector('[data-whi="save"]')?.addEventListener("click", () => {
       if (typeof view.onSave === "function") view.onSave(view.product);
+    });
+    wrap.querySelector('[data-whi="pro"]')?.addEventListener("click", () => {
+      window.open("https://thensanity.github.io/wehaveit/website/index.html#pricing", "_blank", "noopener");
     });
   }
 

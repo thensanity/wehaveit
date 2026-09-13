@@ -28,7 +28,7 @@
         </p>
         <div class="cta">
           <a class="btn primary" href="#install">Install the free extension</a>
-          <a class="btn ghost" href="demo.html">Try the demo shop</a>
+          <a class="btn ghost" href="#pricing">Buy Pro · SGD 15/mo</a>
         </div>
       </div>
       <aside class="stamp-card" aria-label="Product preview">
@@ -94,7 +94,7 @@
           <li>Click <b>Load unpacked</b> and choose the <code>extension</code> folder in this project</li>
           <li>Open a product page on Shopee, Amazon, FairPrice, or any shop, or use the <a href="demo.html">demo shop</a> first</li>
         </ol>
-        <p class="note">Chrome Web Store listing comes after this local version works on real shops.</p>
+        <p class="note">Prefer the Chrome Web Store listing when it is live. Load unpacked is for testing this repo on your computer.</p>
       </div>
     </section>
 
@@ -109,21 +109,25 @@
         <article class="card featured">
           <strong>Pro</strong>
           <div class="price-tag">SGD 15<span style="font-size:1rem">/mo</span></div>
-          <p>Unlimited items and a shared household list. This is the Paddle product.</p>
-          <p class="note">Paddle checkout is next. The extension already enforces the free 50-item cap.</p>
+          <p>Unlimited items on this computer. Checkout is Paddle, not the Chrome Web Store.</p>
+          <button class="btn primary" id="buyPro" type="button">Buy Pro</button>
+          <p class="note" id="checkoutNote">After you pay, Pro unlocks in the WeHaveIt extension on this Chrome profile.</p>
         </article>
         <article class="card">
           <strong>Not included yet</strong>
-          <p>No email scraping, no bank login, no coupon injection. Pro is household sync, not a shopping spyware toolbar.</p>
+          <p>No household sync, email scraping, bank login, or coupon injection. Pro is the 50-item cap lifted, not a shopping toolbar.</p>
         </article>
       </div>
     </section>
 
     <footer>
-      WeHaveIt stores your list locally in Chrome until Pro sync ships.
+      WeHaveIt stores your list locally in Chrome. Pro is billed by Paddle.
       · <a href="privacy.html">Privacy</a>
       · <a href="support.html">Support</a>
     </footer>
   </div>
+  <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+  <script src="paddle-config.js"></script>
+  <script src="checkout.js"></script>
 </body>
 </html>

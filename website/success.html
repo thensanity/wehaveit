@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pro unlocked · WeHaveIt</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="nav">
+      <a class="logo" href="index.html">WeHaveIt</a>
+      <div>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="support.html">Support</a>
+      </div>
+    </nav>
+    <section class="section">
+      <h1>You’re in.</h1>
+      <p class="lede" id="status">If WeHaveIt is installed in this Chrome profile, Pro should unlock on its own. If it does not, paste the code below in the extension popup.</p>
+      <div class="card license-card">
+        <strong>Unlock code</strong>
+        <p class="note">This is your Paddle transaction id. It is also in the receipt email Paddle sends you.</p>
+        <code id="licenseCode">Waiting for checkout…</code>
+        <div class="cta">
+          <button class="btn primary" type="button" id="copyLicense">Copy code</button>
+          <a class="btn ghost" href="index.html">Back to WeHaveIt</a>
+        </div>
+      </div>
+      <p class="note">Household sync is not included yet. Pro removes the 50-item cap on this computer. Manage or cancel the subscription from the email Paddle sends after payment.</p>
+    </section>
+  </div>
+  <script src="success.js"></script>
+</body>
+</html>

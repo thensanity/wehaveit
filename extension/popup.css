@@ -135,4 +135,36 @@ footer {
 }
 
 footer a { color: var(--green); font-weight: 700; text-decoration: none; }
+
+.unlock {
+  margin: 0 14px 14px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fffdf8;
+}
+.unlock summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--green);
+}
+.unlock input {
+  width: 100%;
+  margin-top: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 7px 8px;
+  background: #fff;
+}
+.unlock button {
+  margin-top: 8px;
+  border: 0;
+  background: var(--green);
+  color: var(--paper);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }

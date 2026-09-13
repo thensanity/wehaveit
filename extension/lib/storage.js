@@ -7,6 +7,8 @@
       pro: false,
       personName: "Me",
       householdName: "",
+      paddleTransactionId: "",
+      proActivatedAt: "",
     },
   };
 
