@@ -37,6 +37,23 @@
     window.location.assign(url.href);
   }
 
+  function previewPrice() {
+    const priceEl = document.getElementById("proPrice");
+    if (!priceEl || typeof window.Paddle.PricePreview !== "function") return;
+    window.Paddle.PricePreview({
+      items: [{ priceId: config().priceId, quantity: 1 }],
+    })
+      .then((result) => {
+        const item = result && result.data && result.data.details && result.data.details.lineItems
+          ? result.data.details.lineItems[0]
+          : null;
+        const total = item && item.formattedTotals && item.formattedTotals.total;
+        if (!total) return;
+        priceEl.innerHTML = `${total}<span style="font-size:1rem">/mo</span>`;
+      })
+      .catch(() => {});
+  }
+
   function startPaddle() {
     if (started) return true;
     if (typeof window.Paddle === "undefined") {
@@ -63,6 +80,7 @@
       },
     });
     started = true;
+    previewPrice();
     return true;
   }
 
@@ -91,6 +109,8 @@
     setNote(
       "Paddle catalog is ready to connect. Checkout opens here after clientToken and priceId are set in paddle-config.js."
     );
+  } else {
+    startPaddle();
   }
 
   buyBtn.addEventListener("click", openCheckout);
